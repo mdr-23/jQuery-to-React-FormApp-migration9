@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Form App</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+    <script>
+        $(document).ready(function() {
+            $('#submit-button').click(function() {
+                var firstName = $('#first-name').val();
+                var lastName = $('#last-name').val();
+                var fullName = firstName + ' ' + lastName;
+                $('#full-name').text(fullName);
+            });
+        });
+    </script>
+
+  <h1>Form App</h1>
+  
+  <form>
+    <label for="first-name">First Name:</label>
+    <input type="text" id="first-name">
+    
+    <label for="last-name">Last Name:</label>
+    <input type="text" id="last-name">
+    
+    <div>
+        <button type="button" id="submit-button">Submit</button>
+    </div>
+  </form>
+  
+  <h2>Full Name: <span id="full-name"></span></h2>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
